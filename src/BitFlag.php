@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Karkow\BitFlag;
 
-/**
- * @internal
- */
 class BitFlag
 {
     private int $value = 0;
