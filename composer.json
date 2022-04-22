@@ -1,12 +1,12 @@
 {
-    "name": "nunomaduro/skeleton-php",
-    "description": "A skeleton repository for my packages",
-    "keywords": ["php", "skeleton", "package"],
+    "name": "karkowg/bit-flag",
+    "description": "Minimal BitFlag value object for PHP",
+    "keywords": ["php", "bitflag", "bit-flag"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Gustavo Karkow",
+            "email": "karkowg@gmail.com"
         }
     ],
     "require": {
@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-4": {
-            "NunoMaduro\\SkeletonPhp\\": "src/"
+            "Karkow\\BitFlag\\": "src/"
         }
     },
     "autoload-dev": {
@@ -32,12 +32,15 @@
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
-        "preferred-install": "dist"
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     },
     "scripts": {
         "lint": "php-cs-fixer fix -v",
         "test:lint": "php-cs-fixer fix -v --dry-run",
-        "test:types": "phpstan analyse --ansi --memory-limit=0",
+        "test:types": "phpstan analyse --ansi",
         "test:unit": "pest --colors=always",
         "test": [
             "@test:lint",

@@ -1,22 +1,16 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/nunomaduro/skeleton-php/master/docs/example.png" height="300" alt="Skeleton Php">
-    <p align="center">
-        <a href="https://github.com/nunomaduro/skeleton-php/actions"><img alt="GitHub Workflow Status (master)" src="https://img.shields.io/github/workflow/status/nunomaduro/skeleton-php/Tests/master"></a>
-        <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/nunomaduro/skeleton-php"></a>
-        <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img alt="Latest Version" src="https://img.shields.io/packagist/v/nunomaduro/skeleton-php"></a>
-        <a href="https://packagist.org/packages/nunomaduro/skeleton-php"><img alt="License" src="https://img.shields.io/packagist/l/nunomaduro/skeleton-php"></a>
-    </p>
+    <img src="https://raw.githubusercontent.com/karkowg/bit-flag/main/docs/snippet.png" height="300" alt="BitFlag snippet">
 </p>
 
 ------
-This package provides a wonderful **PHP Skeleton** to start building your next package idea.
+This package provides a minimal BitFlag value object class for PHP.
 
-> **Requires [PHP 7.3.0+](https://php.net/releases/)**
+> **Requires [PHP 7.4](https://php.net/releases/)**
 
-⚡️ Create your package using [Composer](https://getcomposer.org):
+⚡️ Installation
 
 ```bash
-composer create-project nunomaduro/skeleton-php --prefer-source PackageName
+composer require karkowg/bit-flag
 ```
 
 🧹 Keep a modern codebase with **PHP CS Fixer**:
@@ -39,4 +33,4 @@ composer test:unit
 composer test
 ```
 
-**Skeleton PHP** was created by **[Nuno Maduro](https://twitter.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
+Package was created using **[Skeleton PHP](https://github.com/nunomaduro/skeleton-php)** by **[Nuno Maduro](https://twitter.com/enunomaduro)** under the **[MIT license](https://opensource.org/licenses/MIT)**.
