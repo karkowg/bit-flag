@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace Karkow\BitFlag;
 
+use function __is_power_of_two;
+use Karkow\BitFlag\Exceptions\NotAPowerOfTwoException;
+
 class BitFlag
 {
     private int $value = 0;
@@ -20,6 +23,14 @@ class BitFlag
 
     public function set(int $flag): self
     {
+        if (! $flag) {
+            return $this;
+        }
+
+        if (! __is_power_of_two($flag)) {
+            throw new NotAPowerOfTwoException();
+        }
+
         $this->value |= $flag;
 
         return $this;
@@ -27,6 +38,14 @@ class BitFlag
 
     public function unset(int $flag): self
     {
+        if (! $flag) {
+            return $this;
+        }
+
+        if (! __is_power_of_two($flag)) {
+            throw new NotAPowerOfTwoException();
+        }
+
         $this->value &= (~$flag);
 
         return $this;
@@ -34,6 +53,14 @@ class BitFlag
 
     public function toggle(int $flag): self
     {
+        if (! $flag) {
+            return $this;
+        }
+
+        if (! __is_power_of_two($flag)) {
+            throw new NotAPowerOfTwoException();
+        }
+
         $this->value ^= $flag;
 
         return $this;
@@ -41,6 +68,10 @@ class BitFlag
 
     public function has(int $flag): bool
     {
+        if (! __is_power_of_two($flag)) {
+            throw new NotAPowerOfTwoException();
+        }
+
         return ($this->value & $flag) === $flag;
     }
 

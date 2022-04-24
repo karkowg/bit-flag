@@ -16,8 +16,9 @@ $rules = [
             '='  => 'align',
         ],
     ],
-    'concat_space'            => ['spacing' => 'one'],
-    'not_operator_with_space' => true,
+    'concat_space'                      => ['spacing' => 'one'],
+    'not_operator_with_successor_space' => true,
+    'unary_operator_spaces'             => true,
 ];
 
 $rules['increment_style'] = ['style' => 'post'];

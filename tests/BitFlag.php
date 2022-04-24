@@ -1,6 +1,7 @@
 <?php
 
 use Karkow\BitFlag\BitFlag;
+use Karkow\BitFlag\Exceptions\NotAPowerOfTwoException;
 
 test('default value is zero', function () {
     expect(BitFlag::make()->getValue())->toBe(0);
@@ -30,6 +31,16 @@ it('sets multiple flags', function () {
     expect($flag->has($x))->toBeTrue();
     expect($flag->has($y))->toBeTrue();
     expect($flag->has($z))->toBeTrue();
+});
+
+it('toggles flag', function () {
+    $flag = BitFlag::make()->toggle($x = 1 << 0);
+
+    expect($flag->has($x))->toBeTrue();
+
+    $flag->toggle($x);
+
+    expect($flag->has($x))->toBeFalse();
 });
 
 it('has flag', function () {
@@ -93,3 +104,23 @@ test('different instances dont match', function () {
     expect($flag1->matches($flag2))->toBeFalse();
     expect($flag2->matches($flag1))->toBeFalse();
 });
+
+it('throws if setting flag which is not a power of 2', function () {
+    BitFlag::make()->set(3);
+})->throws(NotAPowerOfTwoException::class);
+
+it('throws if unsetting flag which is not a power of 2', function () {
+    BitFlag::make()->unset(3);
+})->throws(NotAPowerOfTwoException::class);
+
+it('throws if toggling flag which is not a power of 2', function () {
+    BitFlag::make()->toggle(3);
+})->throws(NotAPowerOfTwoException::class);
+
+it('throws if checking flag which is not a power of 2', function () {
+    BitFlag::make()->has(3);
+})->throws(NotAPowerOfTwoException::class);
+
+it('throws if checking missing flag which is not a power of 2', function () {
+    BitFlag::make()->doesntHave(3);
+})->throws(NotAPowerOfTwoException::class);
