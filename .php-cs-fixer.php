@@ -13,7 +13,6 @@ $rules = [
     'binary_operator_spaces' => [
         'operators' => [
             '=>' => 'align',
-            '='  => 'align',
         ],
     ],
     'concat_space'                      => ['spacing' => 'one'],
