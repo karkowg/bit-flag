@@ -1,6 +1,13 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/karkowg/bit-flag/main/docs/snippet.png" height="300" alt="BitFlag snippet">
+    <img src="https://raw.githubusercontent.com/karkowg/bit-flag/main/docs/snippet.png" height="400" alt="BitFlag code snippet">
 </p>
+
+# PHP BitFlag
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/karkowg/bit-flag.svg)](https://packagist.org/packages/karkowg/bit-flag)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/karkowg/bit-flag/Tests/main?label=tests)](https://github.com/karkowg/bit-flag/actions?query=workflow%3Atests+branch%3Amain)
+[![License](https://img.shields.io/packagist/l/karkowg/bit-flag.svg)](https://github.com/karkowg/bit-flag/blob/main/LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/karkowg/bit-flag.svg)](https://packagist.org/packages/karkowg/bit-flag)
 
 ------
 This package provides a minimal BitFlag value object class for PHP.
