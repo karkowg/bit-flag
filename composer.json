@@ -1,12 +1,18 @@
 {
     "name": "karkowg/bit-flag",
     "description": "Minimal BitFlag value object for PHP",
-    "keywords": ["php", "bitflag", "bit-flag"],
+    "keywords": [
+        "karkowg",
+        "php",
+        "bitflag",
+        "bit-flag"
+    ],
     "license": "MIT",
     "authors": [
         {
             "name": "Gustavo Karkow",
-            "email": "karkowg@gmail.com"
+            "email": "karkowg@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
